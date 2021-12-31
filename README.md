@@ -10,37 +10,31 @@ A simple script to extract an icon from an atlas extracted from Last Origin data
 
 How to save Last Origin data to PC is not explained here. You can find out using the Internet.
 
-1. Decide from which atlas you want to extract the icon. After loading all the files in AssetStudio and filtering with `atlas/`, you can see what is contained in which file by looking at Sprite.  
-   This time I will extract it from the atlas of this sticker.
-   ![image](https://user-images.githubusercontent.com/3516343/147812893-a9c10293-21d0-4f10-aca1-52dde974de29.png)
-2. Open the context menu and select **Show original file** to identify the file that contains the atlas.  
-   ![image](https://user-images.githubusercontent.com/3516343/147813008-9e0f8857-cdcd-451f-8c73-9f38a04835e0.png)
-3. This.  
-   ![image](https://user-images.githubusercontent.com/3516343/147813083-57111ef3-dbb8-4739-999e-91778c07a241.png)
-4. Reopen it in AssetStudio and load only this file.  
-   Then, if you filter by file name, you can see Texture2D and MonoBehaviour. All you need is these two.  
-   ![image](https://user-images.githubusercontent.com/3516343/147813216-511eaa11-9a74-4792-9a06-baf9682d26bc.png)
-5. Select only Texture2D and MonoBehaviour from Filter Type. This is because a file with the same name will be created if you leave Sprite selected.  
-   ![image](https://user-images.githubusercontent.com/3516343/147812015-c6383b75-6a52-461d-b4e6-1991e61d1432.png)
-6. Before exporting, open **Options -> Export options** and set **Group exported assets by** to **do not group**.  
+1. Determine the atlas from which you want to extract the icon. You can see what is in which file by loading the `UnityCache/Shared/atlas` folder into AssetStudio and looking at Texture2D.  
+    This time, we will extract it from the atlas of this item icons.
+   ![image](https://user-images.githubusercontent.com/3516343/147832163-7b14c818-8088-47e1-852d-e893508eb523.png)
+2. Then filter by filename + `.prefab` to see Texture2D and MonoBehaviour. All you need is these two.  
+    Make sure Sprite is not included. If Sprite is included, a file with the same name will be output, so you will not know which is Texture2D and which is Sprite.
+   ![image](https://user-images.githubusercontent.com/3516343/147832309-db47253e-73b1-4fe7-b54a-7997b2416586.png)
+3. Before exporting, open **Options -> Export options** and set **Group exported assets by** to **do not group**.  
    ![image](https://user-images.githubusercontent.com/3516343/147813468-7451c505-87a3-4c00-a524-e88c337f6d87.png)
-7. Now, make sure that only Texture2D and MonoBehaviour are filtered, then run **Export -> Filtered assets**.
-   ![image](https://user-images.githubusercontent.com/3516343/147813528-998eb2bc-61b9-486d-9cab-3774187f263a.png)
-8. Since json and png are output, make the file name of json the same as png.  
-   ![image](https://user-images.githubusercontent.com/3516343/147813612-58b51948-ecf5-4918-8434-5010f62515be.png)  
-   ![image](https://user-images.githubusercontent.com/3516343/147813665-3f0292dd-80dc-467a-b7e8-6a3d84044fd7.png)
-9. Finally, the script comes into play!  
+4. Now, make sure that only Texture2D and MonoBehaviour are filtered, then run **Export -> Filtered assets**.
+   ![image](https://user-images.githubusercontent.com/3516343/147832131-d5d2d957-1d50-4711-a7ca-0307e3b2a83e.png)
+5. Since json and png are output, make the file name of json the same as png.  
+   ![image](https://user-images.githubusercontent.com/3516343/147832369-a9bc36f3-fb79-4ac5-afeb-a49abb502fc5.png)  
+   ![image](https://user-images.githubusercontent.com/3516343/147832370-7dd97863-6111-49d9-bfa3-d7e6330faf69.png)
+6. Finally, the script comes into play!  
    Put json and png in `data/`. You can have multiple atlases.  
-   ![image](https://user-images.githubusercontent.com/3516343/147815020-8baf4637-4cf1-43e0-a533-7c09813d564f.png)
-10. I will omit the explanation of the setup of node.js and yarn.  
-    If you are using the script for the first time, install the dependency with `yarn`.  
-11. Run it with `yarn start` when you are ready.  
-    ![image](https://user-images.githubusercontent.com/3516343/147815058-08434590-bcc3-4b8a-9519-fc1b79f0f18d.png)
-12. If there is no problem, it should be output to the out folder. This is the end of the long Usage journey.  
-    ![image](https://user-images.githubusercontent.com/3516343/147815205-32686ab3-5dcf-45fe-b5d7-97451d48af37.png)
+   ![image](https://user-images.githubusercontent.com/3516343/147832472-2b71d48a-adae-4e00-8fab-4ec76084ae8e.png)
+7. I will omit the explanation of the setup of node.js and yarn.  
+   If you are using the script for the first time, install the dependency with `yarn`.
+8. Run it with `yarn start` when you are ready.  
+   It may take some time, so please wait until **Done** is displayed.
+   ![image](https://user-images.githubusercontent.com/3516343/147832447-5f9ce5b3-d58b-4436-81fd-1f7b0579ca00.png)
+9. If there is no problem, it should be output to the out folder. This is the end of the long Usage journey.  
+   ![image](https://user-images.githubusercontent.com/3516343/147832505-63697c70-e4f5-43bf-8a2d-6f9bb1da06f1.png)
 
 ![UI_Icon_PROP_MMSticker](https://user-images.githubusercontent.com/3516343/147815260-7fa962bf-1dac-4f5a-9068-cd6a8eaeefc3.png)
-
 
 ## License
 
